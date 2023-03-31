@@ -4,7 +4,7 @@ $blue: #4c43d4;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: $blue;
+  background-color: #4c43d4;
   color: #fff;
   padding: 0;
   margin: 0;
@@ -95,7 +95,7 @@ button {
   .board-row {
     display: flex;
     flex-direction: row;
-    border-bottom: 2px solid #fff;
+    border-bottom: 3px solid #fff;
     &:last-child {
       border-bottom: none;
     }

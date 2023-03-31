@@ -38,9 +38,9 @@ function App() {
         }
       );
 
-      // const base = isTraversing
-      //   ? currentHistory.slice(0, currentHistory.indexOf(lastGamingState) + 1)
-      //   : currentHistory;
+      const base = isTraversing
+        ? currentHistory.slice(0, currentHistory.indexOf(lastGamingState) + 1)
+        : currentHistory;
 
       return currentHistory.concat({
         squares: nextSquareState,
@@ -61,7 +61,9 @@ function App() {
 
   return (
     <div className="app">
-      {/* <h2>Next Player is {nextPlayer}</h2> */}
+      <h1>
+        TIC <span className="text-green">TAC</span> TOE
+      </h1>
       <StatusMessage winner={winner} gamingBoard={gamingBoard} />
       <Board
         squares={gamingBoard.squares}
@@ -75,7 +77,13 @@ function App() {
       >
         Start New Game
       </button>
-      <h1>Current Game History</h1>
+      <h1
+        style={{
+          fontWeight: 'normal',
+        }}
+      >
+        Current Game History
+      </h1>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
     </div>
   );
