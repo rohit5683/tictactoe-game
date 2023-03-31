@@ -42,7 +42,7 @@ function App() {
         ? currentHistory.slice(0, currentHistory.indexOf(lastGamingState) + 1)
         : currentHistory;
 
-      return currentHistory.concat({
+      return base.concat({
         squares: nextSquareState,
         isXNext: !lastGamingState.isXNext,
       });
@@ -65,6 +65,7 @@ function App() {
         <span className="text-orange">TIC</span> TAC{' '}
         <span className="text-green">TOE</span>
       </h1>
+      <h2>RAJEEV</h2>
       <StatusMessage winner={winner} gamingBoard={gamingBoard} />
       <Board
         squares={gamingBoard.squares}
@@ -86,6 +87,7 @@ function App() {
         Current Game History
       </h1>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
+      <div className="bg-balls"></div>
     </div>
   );
 }
